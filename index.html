@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Features Demonstration</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid #ddd; padding: 8px; }
+        form { background-color: #f4f4f4; padding: 20px; }
+        input, select { width: 100%; padding: 10px; margin: 10px 0; }
+
+        h1 { color: #3498db; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        h2 { 
+            background: linear-gradient(to right, #e74c3c, #3498db);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+        h3 { color: #2ecc71; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Features Showcase</h1>
+    </header>
+
+    <main>
+        <!-- Ordered List with Roman Numerals -->
+        <section>
+            <h2>Ordered List with Roman Numerals</h2>
+            <ol type="i">
+                <li>Book</li>
+                <li>Shoes</li>
+                <li>Umbrella</li>
+                <li>Ipad</li>
+                <li>Jacket</li>
+            </ol>
+        </section>
+
+        <!-- External Image from Pexels -->
+        <section>
+            <h2>External Image</h2>
+            <img src="https://images.pexels.com/photos/1714341/pexels-photo-1714341.jpeg" 
+                 alt="Shopping mall" 
+                 width="600" 
+                 height="400">
+        </section>
+
+        <!-- Contacts Table -->
+        <section>
+            <h2>Contact Directory</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Mobile</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lily Nzale</td>
+                        <td>Kilifi</td>
+                        <td>(+254) 7-123-4567</td>
+                        <td>lilydoe@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Kadzo</td>
+                        <td>Narok</td>
+                        <td>(+254) 7-987-6543</td>
+                        <td>jane.smith@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Jerry Sam</td>
+                        <td>Mombasa</td>
+                        <td>(+254) 7-246-8135</td>
+                        <td>jerrysam@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Emily Nthabiseng</td>
+                        <td>Johanesburg</td>
+                        <td>(+254)7-369-2580</td>
+                        <td>emilynthabiseng@example.com</td>
+                    </tr>
+                    <tr>
+                        <td>Alex Kariuki</td>
+                        <td>Nairobi</td>
+                        <td>(+254)7-159-7532</td>
+                        <td>alexkariuki@example.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Registration Form -->
+        <section>
+            <h2>Registration Form</h2>
+            <form action="#" method="post">
+                <!-- Name Field -->
+                <label for="fullName">Full Name:</label>
+                <input type="text" 
+                       id="fullName" 
+                       name="fullName" 
+                       placeholder="Enter your full name" 
+                       required 
+                       minlength="2" 
+                       maxlength="50">
+
+                <!-- Email Field -->
+                <label for="email">Email:</label>
+                <input type="email" 
+                       id="email" 
+                       name="email" 
+                       placeholder="Enter your email" 
+                       required 
+                       pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+
+                <!-- Password Field -->
+                <label for="password">Password:</label>
+                <input type="password" 
+                       id="password" 
+                       name="password" 
+                       placeholder="Enter your password" 
+                       required 
+                       minlength="8" 
+                       maxlength="20">
+
+                <!-- Date Field -->
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" 
+                       id="birthdate" 
+                       name="birthdate" 
+                       required>
+
+                <!-- Dropdown -->
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="">Select a Country</option>
+                    <option value="us">United States</option>
+                    <option value="ca">Canada</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="au">Australia</option>
+                </select>
+
+                <!-- Radio Buttons -->
+                <fieldset>
+                    <legend>Gender:</legend>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </fieldset>
+
+                <!-- Checkboxes -->
+                <fieldset>
+                    <legend>Interests:</legend>
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+                    <input type="checkbox" id="technology" name="interests" value="technology">
+                    <label for="technology">Technology</label>
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+                </fieldset>
+
+                <!-- Submit Button -->
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Multimedia Elements -->
+        <section>
+            <h2>Multimedia</h2>
+            
+            <!-- Audio Element -->
+            <h3>Audio Sample</h3>
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Video Element -->
+            <h3>Video Sample</h3>
+            <video width="600" height="400" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Your browser does not support the video element.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 HTML5 Features Demonstration</p>
+    </footer>
+</body>
+</html>
